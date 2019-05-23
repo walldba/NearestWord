@@ -8,6 +8,7 @@
     <FileVersion>1.0.0.1905</FileVersion>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageTags>netcore;levenshtein;wordsuggestion;nearestword;nearest</PackageTags>
+	<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageVersion>0.1.0</PackageVersion>
     <PackageIconUrl>https://raw.githubusercontent.com/walldba/NearestWord/master/distance.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/walldba/NearestWord</RepositoryUrl>
