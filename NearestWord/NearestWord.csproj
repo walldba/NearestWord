@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyTitle>NearestWord</AssemblyTitle>
+    <AssemblyVersion>1.0.0.1905</AssemblyVersion>
+    <Authors>Wallace Willer &lt;wallacedba@gmail.com&gt;</Authors>
+    <Description>Find a closer word in a list of synonyms. </Description>
+    <FileVersion>1.0.0.1905</FileVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageTags>netcore;levenshtein;wordsuggestion;nearestword;nearest</PackageTags>
+    <PackageVersion>0.1.0</PackageVersion>
+    <PackageIconUrl>https://raw.githubusercontent.com/walldba/NearestWord/master/distance.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/walldba/NearestWord</RepositoryUrl>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Fastenshtein" Version="1.0.0.5" />
+  </ItemGroup>
+
+</Project>
