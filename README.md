@@ -1,3 +1,9 @@
+<p align="center" >
+    <a href="https://www.flaticon.com/free-icon/bird_212800#"> 
+        <img alt="logo" src="https://raw.githubusercontent.com/walldba/NearestWord/master/nearLogo.png" width="210" height="210">
+    </a>
+</p>
+
 # NearestWord
 
 Simple .NET and .NET Core package to find a closer word in a list of synonyms.
@@ -9,7 +15,7 @@ Simple .NET and .NET Core package to find a closer word in a list of synonyms.
 [build-img]: https://ci.appveyor.com/api/projects/status/qov7081vpw3ex354?svg=true
 
 [nuget]:     https://www.nuget.org/packages/nearestword
-[nuget-img]: https://badge.fury.io/nu/nearestword.svg
+[nuget-img]: https://badge.fury.io/nu/NearestWord.svg
 
 This package clears a string and compares it to a list of synonyms accepted a limited of changes to find the nearest word into the list. 
 "operations" means the insertion, exclusion or replacement of a character.
