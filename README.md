@@ -16,7 +16,7 @@ This package clears a string and compares it to a list of synonyms accepted a li
 
 #### Example
 
-| Typed Word    | Example word in list  | Changes  |
+| Typed Word    | Example word in list  | Operations  |
 | ------------- |:-------------:| -----:|
 | Brazil        | Brasil        |   1   |
 | My income tax      |    Income tax |2
