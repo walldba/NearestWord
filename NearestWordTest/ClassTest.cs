@@ -25,7 +25,7 @@ namespace NearestWordTest
         {
             IEnumerable<string> current = new[] { "is", "on", "of" };
             var expected = "is | on | of";
-            var treated = current.RemoveStopWord();
+            var treated = current.CreateRegexPattern();
 
             Debug.WriteLine(treated);
 

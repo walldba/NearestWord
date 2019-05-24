@@ -18,7 +18,7 @@ namespace NearestWord
         public static (bool, string) ApproximateWord(this string typedWord, IEnumerable<string> synonyms,
             IEnumerable<string> regexPattern, int maxChanges)
         {
-            var wordSuggestion = ReplaceRegex(typedWord, RemoveStopWord(regexPattern))
+            var wordSuggestion = ReplaceRegex(typedWord, CreateRegexPattern(regexPattern))
                                  .RemoveSpecialCharacters()
                                  .LevenshteinDistance(synonyms, maxChanges);
 
@@ -39,7 +39,7 @@ namespace NearestWord
         /// </summary>
         /// <param name="regexPattern">Stopwords that will be removed in Regex</param>
         /// <returns>Return treated string for regex pattern</returns>
-        public static string RemoveStopWord(this IEnumerable<string> regexPattern)
+        public static string CreateRegexPattern(this IEnumerable<string> regexPattern)
             => string.Join(" | ", regexPattern.Select(x => x.ToString().Trim()));
 
         /// <summary>
