@@ -20,6 +20,7 @@ namespace NearestWord
         {
             var wordSuggestion = ReplaceRegex(typedWord, CreateRegexPattern(regexPattern))
                                  .RemoveSpecialCharacters()
+                                 .RemoveWhiteSpaces()
                                  .LevenshteinDistance(synonyms, maxChanges);
 
             return (wordSuggestion != null, wordSuggestion);
@@ -55,8 +56,16 @@ namespace NearestWord
             for (int i = 0; i < withSpecial.Length; i++)
                 typedWord = typedWord.Replace(withSpecial[i].ToString(), withoutSpecial[i].ToString());
 
-            return typedWord.Replace(" ", string.Empty).Trim();
+            return Regex.Replace(typedWord, @"\s{2,}", " ").Trim();
         }
+
+        /// <summary>
+        /// Remove whitespaces
+        /// </summary>
+        /// <param name="typedWord">Text to be treated</param>
+        /// <returns>String without whitespaces</returns>
+        public static string RemoveWhiteSpaces(this string typedWord)
+            => Regex.Replace(typedWord, @"\s+", string.Empty);
 
         /// <summary>
         /// Checks whether the number of changes between the word entered and the synonym list
