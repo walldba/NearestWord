@@ -35,9 +35,21 @@ namespace NearestWordTest
         [TestMethod]
         public void RemoveSpecialCharactersTest()
         {
-            var current = "Testing! Method for removing special characters. Thank you! :)";
-            var expected = "TestingMethodforremovingspecialcharactersThankyou";
+            var current = "Testing!!! Method for removing special characters. Thank you! :)";
+            var expected = "Testing Method for removing special characters Thank you";
             var treated = current.RemoveSpecialCharacters();
+
+            Debug.WriteLine(treated);
+
+            Assert.AreEqual(treated, expected);
+        }
+
+        [TestMethod]
+        public void RemoveWhiteSpaces()
+        {
+            var current = "Method for removing      white     spaces       ";
+            var expected = "Methodforremovingwhitespaces";
+            var treated = current.RemoveWhiteSpaces();
 
             Debug.WriteLine(treated);
 
